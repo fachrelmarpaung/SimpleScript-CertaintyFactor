@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hasil Analisa</title>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    
+        <!-- mycss -->
+        <link rel="stylesheet" href="../assets/css/hasil.css">
+    
+    
+        <!-- JSoutsite -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.11.0/umd/react-dom.production.min.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container pt-3">
+        <div class="row">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-4">
+                            <p>
+                                <img src="https://1.bp.blogspot.com/-BRsADaaCMNw/Way3PdGhJ6I/AAAAAAAAKDE/VOBhm-rTg1MxO-4vOLSkX6GBo6SROLVhQCK4BGAYYCw/s1600/lambang%2Bpsikologi.png" alt="" width="100"><br>Psikolog Online</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="text-center">SURAT KETERANGAN PSIKOLOG ONLINE</h2>
+                            <p>Berdasarkan hasil yang didapat dari analisa yang telah dilakukan maka data yang didapat adalah sebagai berikut :</p>
+                            <table>
+                                <tr>
+                                    <td>Nama Lengkap</td>
+                                    <td></td>
+                                    <td>Andi</td>
+                                </tr>
+                                <tr>
+                                    <td>Tanggal Lahir</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Alamat</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Hasil</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        <p>Anda mengidap tingkat depresi "<?= $_SESSION['hasil'] ?>" dengan persentase "<?= $_SESSION['hasilhitungCF'] * 100 ?>%".</p>
+                        <h3>Penanganan : </h3>
+                        if ($_SESSION['hasil'] == "Major") {
+                            $html='
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Solusi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Psikolog</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Obat Antidepresan</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Terapi Kejut Listrik</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Komplikasi Depresi</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Pencengahan Depresi</td>
+                                    </tr>
+                                </tbody>
+                            </table>';
+                            echo $html;
+                        } elseif ($_SESSION['hasil'] == "Moderate") {
+                        $template='<table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Solusi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Psikolog</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Obat Antidepresan</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Terapi Kejut Listrik</td>
+                            </tr>
+                        </tbody>
+                    </table>';
+                        echo $html;
+                        } else { 
+                            $html = '
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Solusi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Psikolog</td>
+                                    </tr>
+                                </tbody>
+                            </table>';
+                        echo $html;
+                        }
+                        </div>
+                    </div>
+                </div>
+                </div>
+</body>
+</html>
